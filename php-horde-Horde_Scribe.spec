@@ -3,19 +3,20 @@
 %include	/usr/lib/rpm/macros.php
 Summary:	%{pearname} - Scribe
 Name:		php-horde-Horde_Scribe
-Version:	1.0.0
+Version:	1.0.1
 Release:	1
 License:	Apache v2.0
 Group:		Development/Languages/PHP
 Source0:	http://pear.horde.org/get/%{pearname}-%{version}.tgz
-# Source0-md5:	b080d317ce4dd12acdfa1eeb2ca67963
+# Source0-md5:	797b96864136deaa5c6fe5e65a1155b9
 URL:		https://github.com/horde/horde/tree/master/framework/Scribe/
 BuildRequires:	php-channel(pear.horde.org)
 BuildRequires:	php-packagexml2cl
-BuildRequires:	php-pear-PEAR
+BuildRequires:	php-pear-PEAR >= 1:1.7.0
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.610
 Requires:	php-channel(pear.horde.org)
+Requires:	php-horde-Horde_Thrift
 Requires:	php-pear >= 4:1.3.6-2
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -28,7 +29,7 @@ In PEAR status of this package is: %{status}.
 %prep
 %pear_package_setup
 
-mv ./%{php_pear_dir}/examples/Horde/Scribe examples
+mv docs/Horde_Scribe/examples .
 
 %build
 packagexml2cl package.xml > ChangeLog
