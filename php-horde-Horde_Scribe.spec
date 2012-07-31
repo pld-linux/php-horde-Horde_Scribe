@@ -3,12 +3,12 @@
 %include	/usr/lib/rpm/macros.php
 Summary:	%{pearname} - Scribe
 Name:		php-horde-Horde_Scribe
-Version:	1.0.1
+Version:	1.0.2
 Release:	1
 License:	Apache v2.0
 Group:		Development/Languages/PHP
 Source0:	http://pear.horde.org/get/%{pearname}-%{version}.tgz
-# Source0-md5:	797b96864136deaa5c6fe5e65a1155b9
+# Source0-md5:	229459304b4f44b23de97e8251168d30
 URL:		https://github.com/horde/horde/tree/master/framework/Scribe/
 BuildRequires:	php-channel(pear.horde.org)
 BuildRequires:	php-packagexml2cl
