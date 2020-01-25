@@ -1,6 +1,5 @@
 %define		status		stable
 %define		pearname	Horde_Scribe
-%include	/usr/lib/rpm/macros.php
 Summary:	%{pearname} - Scribe
 Name:		php-horde-Horde_Scribe
 Version:	1.0.2
